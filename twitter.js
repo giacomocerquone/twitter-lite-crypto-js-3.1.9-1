@@ -2,7 +2,7 @@ const CryptoJS = require('crypto-js');
 const Base64 = require('crypto-js/enc-base64');
 const OAuth = require('oauth-1.0a');
 const Fetch = require('cross-fetch');
-const querystring = require('query-string');
+const querystring = require('querystring');
 const Stream = require('./stream');
 
 const getUrl = (subdomain, endpoint = '1.1') =>
