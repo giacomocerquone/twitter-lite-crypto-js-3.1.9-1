@@ -1,4 +1,5 @@
-const crypto = require('crypto');
+const CryptoJS = require('crypto-js');
+const Base64 = require('crypto-js/enc-base64');
 const OAuth = require('oauth-1.0a');
 const Fetch = require('cross-fetch');
 const querystring = require('querystring');
@@ -12,10 +13,7 @@ const createOauthClient = ({ key, secret }) => {
     consumer: { key, secret },
     signature_method: 'HMAC-SHA1',
     hash_function(baseString, key) {
-      return crypto
-        .createHmac('sha1', key)
-        .update(baseString)
-        .digest('base64');
+      return Base64.stringify(CryptoJS.HmacSHA1(baseString, key));
     },
   });
 

@@ -1,6 +1,6 @@
 {
-  "name": "twitter-lite",
-  "version": "0.14.0",
+  "name": "twitter-lite-crypto3.1.9-1",
+  "version": "0.14.1",
   "description": "Tiny, full-featured client/server REST/stream library for the Twitter API",
   "source": "twitter.js",
   "main": "dist/twitter.js",
@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "cross-fetch": "^3.0.0",
+    "crypto-js": "^3.1.9-1",
     "oauth-1.0a": "^2.2.4"
   },
   "devDependencies": {
@@ -48,7 +49,7 @@
     "lint": "eslint --fix ./",
     "prepare": "microbundle {stream,twitter}.js && bundlesize",
     "test": "eslint --fix . && jest --detectOpenHandles",
-    "release": "npm run -s prepare && npm test && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "release": "npm run -s prepare && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "husky": {
     "hooks": {
