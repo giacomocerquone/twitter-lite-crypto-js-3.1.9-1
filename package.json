@@ -1,6 +1,6 @@
 {
-  "name": "twitter-lite-crypto3.1.9-1",
-  "version": "0.14.1",
+  "name": "twitter-lite-older-crypto",
+  "version": "0.15.1",
   "description": "Tiny, full-featured client/server REST/stream library for the Twitter API",
   "source": "twitter.js",
   "main": "dist/twitter.js",
@@ -30,7 +30,8 @@
   "dependencies": {
     "cross-fetch": "^3.0.0",
     "crypto-js": "^3.1.9-1",
-    "oauth-1.0a": "^2.2.4"
+    "oauth-1.0a": "^2.2.4",
+    "query-string": "5"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
